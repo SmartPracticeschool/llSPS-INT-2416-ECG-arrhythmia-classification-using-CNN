@@ -1,0 +1,188 @@
+#options{
+  text-align: right;
+}
+#about{
+  padding: 70px;
+  background-color:  white;
+  color: black;
+}
+#predict{
+padding: 3%;
+  background-color: #fc3a52;
+  color: white;
+}
+.top{
+  text-align: center;
+padding: 2%;
+  background-color: #fc3a52;
+  color: white;
+}
+.bg-light{
+  background-color: #ffaaaa;
+  margin: 10px;
+}
+.navbar-brand{
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+h1{
+  font-family: 'Lalezar', cursive;
+  font-size: 60px;
+padding-top: 6%;
+}
+.top p{
+font-family: 'PT Sans', sans-serif;
+padding: 7%;
+font-size: 40px;
+}
+#about h3,{
+font-family: 'Concert One', cursive;
+font-size: 50px;
+}
+.Feature-box{
+  font-family: 'Markazi Text', serif;
+  font-size: 25px;
+}
+#about p{
+  font-family: 'Markazi Text', serif;
+  font-size: 30px;
+  padding-bottom: 15px;
+  text-align: justify;
+}
+#hoe
+.container{
+  padding-bottom: 30px;
+}
+.container-fluid {
+  padding: 3% 7%;
+}
+.Feature-box{
+  position: relative;
+    left: 600;
+    top: 20;
+}
+.cla{
+  position: relative;
+top: 100;
+left: 200;
+font-family: 'Concert One', cursive;
+}
+
+.v{
+  position: relative;
+top: 70;
+left: 200;
+font-family: 'Concert One', cursive;
+}
+.f{
+  position: relative;
+top: 58;
+left:200;
+font-family: 'Concert One', cursive;
+}
+.u{
+  position: relative;
+top: 79;
+left:200;
+font-family: 'Concert One', cursive;
+}
+.big-heading {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: #fa4252;
+  text-align: left;
+  margin: 10px;
+}
+
+
+.checkecg{
+  margin: 40px;
+}
+
+.img-preview {
+width: 256px;
+height: 256px;
+    position: relative;
+    left:500;
+    border: 5px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 5em;
+}
+
+
+
+.img-preview>div {
+    width: 100%;
+    height: 100%;
+    background-size: 256px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+input[type="file"] {
+    display: none;
+}
+
+}
+#imageUpload{
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+
+}
+#CheckECG{
+  margin: 2%;
+  padding:0 1% 2% 4%;
+}
+
+.upload-label{
+font-weight:200;
+}
+
+.upload-label:hover{
+    background: #34495E;
+    color: #39D2B4;
+    font-weight: 900;
+}
+
+.loader {
+  border: 8px solid black;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+
+}
+#btn-predict{
+position: relative;
+    left: 425;
+}
+.ab{
+  padding:  0 20px 80px 5px;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+#footer p.foot1{
+    font-family:monospace;
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

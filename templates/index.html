@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECG Arrhythmia Classifier</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka+One&family=Lalezar&family=Markazi+Text&family=PT+Sans+Narrow&family=PT+Sans:ital@1&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">ECG Arrhythmia Classifier</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03 options">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#Home">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#CheckECG">Check Arrhythmia</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#predict">Know more about Arrhythmia</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#about">About</a>
+     </li>
+    </ul>
+  </div>
+</nav>
+<!-- Home -->
+<section id="Home">
+<div class="top">
+  <h1>ECG Arrhythmia Classifier</h1><br><br>
+  
+<img src="{{url_for('static', filename='img1.jpg')}}"/>
+  <p>Upload the image of the ECG and get the type of Arrhythmia within few seconds.</p>
+</div>
+</section>
+<!-- check ECG -->
+<section id="CheckECG">
+<div class="checkecg">
+  <div class="row">
+          <div class="">
+            <h1 class="big-heading">Upload the ECG image and get the results in few seconds.</h1>
+            <form action = "http://localhost:5000/predict" id="upload-file" method="post" enctype="multipart/form-data">
+              <br>
+              <div class="lab">
+                <label for="imageUpload" class="upload-label">
+        					Upload
+        				</label>
+        				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+        			</form>
+              </div>
+
+        <div class="image-section " style="display:none;">
+        				<div class="img-preview">
+        					<div id="imagePreview">
+        					</div>
+        				</div>
+        				<div>
+        					<button type="button" class="btn btn-info btn-lg " id="btn-predict">Click on this to see what arrhythmia it is!</button>
+        				</div>
+        			</div>
+<br>
+        			<div class="loader" style="display:none;"></div>
+
+        			<h3>
+        				<span id="result"> </span>
+        			</h3>
+
+        		</div>
+          </div>
+          <br>
+          <div class="">
+            <img src="{{url_for('static', filename='img.jpg')}}"/>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+</section>
+
+<!-- predict -->
+<section id="predict">
+<div class="">
+  <h3>ECG Class Description</h3>
+  <div class="container">
+    <div class="row cla">
+      <h4>Normal beat</h4>
+    </div>
+    <div class="Feature-box col-lg-4 col-md-12">
+      <ul>
+        <li>Normal beat</li>
+        <li>Left bundle branch block beat</li>
+        <li>Right bundle branch block beat</li>
+        <li>Atrial escape beat</li>
+        <li>Nodal (junctional) escape beat</li>
+      </ul>
+    </div>
+  </div>
+<div class="container">
+  <div class="row cla">
+      <h4>Supraventricular ectopic beat</h4>
+  </div>
+    <div class="Feature-box col-lg-4 col-md-12">
+      <ul>
+        <li>Atrial premature beat</li>
+        <li>Aberrated atrial premature beat </li>
+        <li>Nodal (junctional) premature beat</li>
+        <li>Supraventricular premature beat</li>
+      </ul>
+    </div>
+</div>
+<div class="container">
+  <div class="row v">
+    <h4>Ventricular ectopic beat</h4>
+  </div>
+<div class="Feature-box col-lg-4 col-md-12">
+  <ul>
+    <li>Premature ventricular contraction</li>
+    <li>Ventricular escape beat</li>
+  </ul>
+</div>
+</div>
+  <div class="container">
+    <div class="row f">
+      <h4>Fusion beat </h4>
+    </div>
+    <div class="Feature-box col-lg-4 col-md-12">
+      <ul>
+        <li>Fusion of ventricular and normal beat</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row u">
+        <h4>Unknown beat</h4>
+    </div>
+  <div class="Feature-box col-lg-4 col-md-12">
+    <ul>
+      <li>Paced beat</li>
+      <li>Fusion of paced and normal beat</li>
+      <li>Unclassified beat</li>
+    </ul>
+  </div>
+  </div>
+
+
+</div>
+
+</section>
+<!-- About -->
+<section id="about">
+<div id="home" class="ab">
+  <div class="">
+    <h3>How does this application works?</h3>
+    <p>Upload the image of the ECG and the application will let you know the type of Arrhythmia that the patient have.</p>
+  </div>
+  <div class="">
+  <h3>ECG</h3>
+  <p>An electrocardiogram (ECG) is a simple test that can be used to check your heart's rhythm and electrical activity.
+    Sensors attached to the skin are used to detect the electrical signals produced by your heart each time it beats.
+    These signals are recorded by a machine and are looked at by a doctor to see if they're unusual.
+    An ECG may be requested by a heart specialist (cardiologist) or any doctor who thinks the patient might have a problem with your heart, including Patient GP. That's the result of this test we will analyze.
+  </p>
+</div>
+
+<div class="">
+  <h3>Arrhythmia</h3>
+  <p>An arrhythmia describes an irregular heartbeat. With this condition, a person’s heart may beat too quickly, too slowly, too early, or with an irregular rhythm.</p>
+</div>
+</div>
+
+
+<footer>
+  <div id="footer" class="container-fluid white">
+      <p class="foot1">ECG class description are classified using AAMI standard.</p>
+      <p class="foot1">&copy; 2020 Yuvarani V.</p>
+
+  </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+</footer>
+</body>
+</html>
